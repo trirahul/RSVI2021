@@ -1,8 +1,8 @@
 import React from 'react'
-import { img_1,img_2,img_3 } from '../Images'
-import '../App.css'
+import { img_1,img_2,img_3 } from '../../Images'
+import '../../App.css'
 
-function projects() {
+function Projects() {
     return (
         <div className="container">
             <div className="projects">
@@ -41,4 +41,4 @@ function projects() {
     )
 }
 
-export default projects
+export default Projects
