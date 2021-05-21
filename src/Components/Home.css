@@ -1,0 +1,23 @@
+body{
+    background-color: #f8f9fa;
+}
+
+h1{
+  margin: 0;
+line-height: normal;
+letter-spacing: normal;
+font-size: 42px;
+font-weight: 700;
+}
+
+h2{
+  font-size: 26px;
+  margin: 0;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+}
+
+.container{
+  padding: 100px;
+}
