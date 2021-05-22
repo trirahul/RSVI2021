@@ -24,12 +24,19 @@ body{
     padding-left: 50px;
 }
 
+.para{
+    text-align: left;
+}
+
 @media only screen and (max-width: 768px) {
     .image-box{
         text-align: center;
     }
     .text-box{
         justify-content: center;
+        text-align: center;
+    }
+    .para{
         text-align: center;
     }
     .text{

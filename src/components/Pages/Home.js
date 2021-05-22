@@ -23,7 +23,7 @@ class Home extends Component {
                             </h3>
                         </div>
                         <div className='row text-box text'>
-                            <p>
+                            <p className='para'>
                             I'm a paragraph. Click here to add <br/>
                             your own text and edit me. I’m a <br/>
                             great place for you to tell a story and <br/>
