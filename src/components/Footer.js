@@ -9,7 +9,7 @@ const Footer = () => {
             <div class="row">
                 <div class="col-sm-6 col-md-3 item">
                     <h3>Phone</h3>
-                    <a href="#">123-456-7890</a>
+                    <p>123-456-7890</p>
                 </div>
                 <div class="col-sm-6 col-md-3 item">
                     <h3>Email</h3>

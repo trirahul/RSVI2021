@@ -9,7 +9,9 @@ class Home extends Component {
                 <div className='row'>
                     <div className='col-md-6 image-box' >
                         <img src='https://static.wixstatic.com/media/c837a6_a5f904abc9224779abfc65cb53fa6ba7~mv2.jpg/v1/crop/x_158,y_151,w_1117,h_1117/fill/w_630,h_630,al_c,q_85,usm_0.66_1.00_0.01/gettyimages-1284121212-2048x2048_edited_.webp'
-                        class='round-image'/>
+                        class='round-image'
+                        alt='nicol rider pic'
+                        />
                     </div>
                     <div className='col-md-6'>
                         <div className='row text-box text'>

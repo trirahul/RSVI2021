@@ -5,7 +5,6 @@ function Header(props) {
     const [click, setClick] = useState(false)
     
     const handleClick = () =>setClick(!click);
-    const closeMobileMenu = () => setClick(false);
     
     return ( 
         <div>

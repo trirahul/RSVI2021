@@ -1,14 +1,13 @@
 body{
     background-color: #f9fafa;
-    
-  }
+}
 
 
- @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     body{
         padding: 50px;
     }
-  }
+}
 
 .round-image{
     width: 420px;

@@ -9,5 +9,9 @@ a,p{
     color: black;
 }
 footer{
+    padding-top: 50px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: lightgray;
     height: 100px;
 }
