@@ -1,44 +1,43 @@
 import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
 import './Header.css';
 
-function Header() {
+function Header(props) {
     const [click, setClick] = useState(false)
     
     const handleClick = () =>setClick(!click);
     const closeMobileMenu = () => setClick(false);
     
     return (
-        <>
+        <div>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                    <div className="navbar-logo" onClick={props.clickHome}>
                         Nicol Rider <i className="fab fa-typo3"></i>
-                    </Link>
+                    </div>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <div className="nav-links" onClick={props.clickResume}>
                                 Resume
-                            </Link>
+                            </div>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <div to="/" className="nav-links" onClick={props.clickProjects}>
                                 Projects
-                            </Link>
+                            </div>
                         </li>
                         <li className='nav-item'>
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <div to="/" className="nav-links" onClick={props.clickContact}>
                                 Contact
-                            </Link>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </nav>        
-        </>
+        </div>
     )
 }
 
-export default Header
+export default Header;

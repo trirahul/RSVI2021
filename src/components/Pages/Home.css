@@ -1,0 +1,82 @@
+body{
+    background-color: #f9fafa;
+    
+  }
+
+
+ @media only screen and (max-width: 768px) {
+    body{
+        padding: 50px;
+    }
+  }
+
+.round-image{
+    width: 420px;
+    height: 420px;
+    border-radius: 210px;
+}
+
+.image-box{
+    text-align: right;
+}
+
+.text{
+    padding-left: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .image-box{
+        text-align: center;
+    }
+    .text-box{
+        justify-content: center;
+        text-align: center;
+    }
+    .text{
+        padding-left: 0px;
+    }
+  }
+
+h1{
+    font-size: 100px;
+}
+
+h1, h3, p{
+    color: black;
+}
+  
+.top-gap{
+    height: 200px;
+}
+
+.bottom-gap{
+    height: 150px;
+}
+  
+.round-resume, .round-projects, .round-contact{
+    width: 120px;
+    height: 120px;
+    margin-top: 28px;
+    border-width: 1px;
+    border-radius: 60px;
+    vertical-align: top;
+    border-style: solid;
+    border-color: black;
+    margin-right: 10px;
+}
+ 
+.round-resume{
+    background-color: orange;
+}
+
+.round-projects{
+    background-color: red;
+}
+
+.round-contact{
+    background-color: lightblue;
+}
+
+.round-resume:hover, .round-projects:hover, .round-contact:hover{
+    background-color: transparent;
+}
