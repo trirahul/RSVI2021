@@ -1,9 +1,9 @@
-.heading-custom{
-    padding: 5% 0px 0px 11%;
+.heading-custom h1{
+    padding: 5% 0px 0px 10%;
     text-align: left;
-    font-size: calc(10px + 2vmin);
+    font-size: 50px;
   }
-  
+
   .row-custom{
     display: flex;
     margin: 0px 0px 0px 10%;
@@ -41,7 +41,7 @@
     .heading-custom{
       padding: 5% 0px 0px 5%;
       text-align: left;
-      font-size: calc(10px + 2vmin);
+      font-size:30px;
     }
     .App {
       text-align: center;

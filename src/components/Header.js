@@ -7,12 +7,12 @@ function Header(props) {
     const handleClick = () =>setClick(!click);
     const closeMobileMenu = () => setClick(false);
     
-    return (
+    return ( 
         <div>
             <nav className="navbar">
                 <div className="navbar-container">
                     <div className="navbar-logo" onClick={props.clickHome}>
-                        Nicol Rider <i className="fab fa-typo3"></i>
+                        <small className="yellow-circle"></small>Nicol Rider<button className="editor-button">Editor</button>
                     </div>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>

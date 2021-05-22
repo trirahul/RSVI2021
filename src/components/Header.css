@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
   }
   
   .navbar-container {
@@ -14,13 +14,31 @@
     height: 80px;
     max-width: 1500px;
   }
+
+  .yellow-circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(230, 149, 0);
+    margin-right: 20px;
+  }
   
+  .editor-button{
+    background: transparent;
+    border: none;
+    text-align: center;
+    color: rgb(85, 83, 83);
+    font-size: 15px;
+    outline: none;
+  }
+
   .navbar-logo {
     color: rgb(19, 18, 18);
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
   }
