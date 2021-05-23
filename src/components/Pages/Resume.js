@@ -81,7 +81,6 @@ class Resume extends Component {
                         </ul>
                     </div>
                 </div>
-                <hr></hr>
             </div>
         )
     }
