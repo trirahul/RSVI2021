@@ -28,7 +28,7 @@ class App extends Component {
     this.setState({page:'contact'});
   }
   render() {
-    if(this.state.page=='projects'){
+    if(this.state.page==='projects'){
       return (
         <div className='App'>
           <Header 
@@ -42,7 +42,7 @@ class App extends Component {
         </div>
       );
     }
-    else if(this.state.page=='resume'){
+    else if(this.state.page==='resume'){
       return (
         <div className='App'>
           <Header 
@@ -56,7 +56,7 @@ class App extends Component {
         </div>
       );
     }
-    else if(this.state.page=='contact'){
+    else if(this.state.page==='contact'){
       return (
         <div className='App'>
           <Header 
