@@ -1,0 +1,63 @@
+.row-custom{
+    display: flex;
+    margin: 0px 10% 0px 10%;
+    padding: 1% 0px;
+  }
+
+  .heading-custom h1{
+    padding: 5% 0px 0px 10%;
+    text-align: left;
+    font-size: 50px;
+  }
+
+.col-4-custom{
+    width: 33.33%;
+    padding: 10px;
+    font-size: calc(5px + 2vmin);
+    font-weight: 300;
+  }
+
+
+  .year{
+    margin-right: 20px;
+    text-align: right;
+  }
+
+  .section-heading{
+      text-align: left;
+  }
+  
+  .sub-heading{
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+    }
+    
+    .para{
+        text-align: left;
+    }
+
+    .lists{
+        text-align: left;
+        font-size: 17px;
+    }
+
+    @media (max-width:768px){
+        .heading-custom{
+          padding: 5% 0px 0px 5%;
+          text-align: left;
+          font-size:30px;
+        }
+        .row-custom{
+          display: flex;
+          flex-direction: column;
+          margin: 0px 0px 0px 2%;
+          width: 100%;
+        }
+        .year{
+            text-align: left;
+          }
+        .col-4-custom{
+            width: 100%;
+        }
+      }
