@@ -27,18 +27,27 @@ function ContactDetails() {
 function Form(props) {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
-  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");                
+  const [sub,setSub] = useState("");
+  const [email, setEmail] = useState("");              // Email Settings
   const [emailBoxColor, setEmailBoxColor] = useState("");
   const [submit,setSubmit] = useState("");
-  const handleFname = (event) => {                     //arrow functions always need a return type here
+  /*
+   * Associated Functions
+   */
+  const handleFname = (event) => {                     // arrow functions always need a return type here
     setFname(event.target.value);
   }
   const handleLname = (event) => {                     
     setLname(event.target.value);
   }
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSub = (event) => {                     
+    setSub(event.target.value);
   }
+  const handleMsg = (event) => {                     
+    setMsg(event.target.value);
+  }
+  
   const handleEmail = (event) => {
     var email = event.target.value;
     setEmail(event.target.value);
@@ -49,27 +58,28 @@ function Form(props) {
     }
   }
   const onSubmit = (event) => {
+    event.preventDefault();
     var email = document.getElementById("email").getAttribute("value").toString();
     if (validator.isEmail(email) || email == null) {
-                                                      //submit data
+                                                         //submit data
     } else {
       alert("Enter correct email");
     }
   }
   return(
-    <form onSubmit = {handleSubmit}>
+    <form onSubmit = {onSubmit}>
       <br/>
         <div className="container">
           <div className="row d-flex flex-row-reverse">
             <div className="col-4 col-md-4 p-2">
             Last Name
             <br/>
-              <input type = "text" placeholder = "Last Name" className = "col"/>
+              <input type = "text" placeholder = "Last Name" onChange = {handleLname}/>
             </div>
             <div className="col-4 col-md-4 p-2">
             First Name
             <br/>
-              <input type = "text" placeholder = "First Name" />
+              <input type = "text" placeholder = "First Name" onChange = {handleFname}/>
             </div>
           </div>
           <div className="row d-flex flex-row-reverse">
@@ -79,7 +89,7 @@ function Form(props) {
                 <div className="col-4 col-md-4 p-2">
                 Subject
                 <br/>
-                  <input type = "text" placeholder = "Subject" />
+                  <input type = "text" placeholder = "Subject" onChange = {handleSub} value = {sub}/>
                 </div>
           </div>
           <br/>
@@ -87,10 +97,10 @@ function Form(props) {
           <br/>
           <div className="row d-flex flex-row-reverse">
             <div className="col-4 col-md-4 p-2 top-buffer">
-              <button type="submit" class="btn btn-warning btn-circle btn-xl align-top" onClick = {onSubmit}>Submit</button>
+              <button type="submit" class="btn btn-warning btn-circle btn-xl align-top" >Submit</button>
             </div>
             <div className="col-4 col-md-4 p-2">Message<br/>
-              <input type = "text" placeholder = "Message" className = "p-5"/>
+              <textarea rows="7" cols="35" placeholder = "Message" onChange = {handleMsg} value = {msg}></textarea>
             </div>
           </div> 
         </div>
