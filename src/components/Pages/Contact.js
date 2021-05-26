@@ -98,10 +98,7 @@ function Form(props) {
   );
 }
 
-function App() {
-
-    const [color,setColor]=useState('red');
-  const [textColor,setTextColor]=useState('white');
+function Contact() {
   return (
     <React.Fragment>
       <div><ContactDetails/></div>
@@ -110,4 +107,4 @@ function App() {
   );
 }
 
-export default App;
+export default Contact;
