@@ -1,11 +1,18 @@
 import ReactDOM from 'react-dom';
-import React, { useEffect, useState } from "react";
-import validator from 'validator';
+import React, { useEffect, useState } from "react";       // to be used for hooks
+import validator from 'validator';                        // to be used to validate email
+import { Helmet } from "react-helmet";                    // to use for page title
+// page title
+const TITLE = 'Contact us';        
 
-function ContactDetails() {
+// Contact Component
+function ContactDetails() {                               
   return (
     <div className = "container">
-       <div className = "float-start">
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
+      <div className = "float-start">
         <h1>CONTACT</h1>
         <p>Looking forward to hearing from you
         <br/>
@@ -24,7 +31,9 @@ function ContactDetails() {
   );
 }
 
+// Form Component
 function Form(props) {
+// declaring state variables & functionsto modify them 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [msg, setMsg] = useState("");                
@@ -32,10 +41,12 @@ function Form(props) {
   const [email, setEmail] = useState("");              // Email Settings
   const [emailBoxColor, setEmailBoxColor] = useState("");
   const [submit,setSubmit] = useState("");
-  /*
-   * Associated Functions
-   */
-  const handleFname = (event) => {                     // arrow functions always need a return type here
+/*
+ * Associated Functions below
+ */
+
+// arrow functions always need a return type here
+  const handleFname = (event) => {                     
     setFname(event.target.value);
   }
   const handleLname = (event) => {                     
@@ -47,30 +58,36 @@ function Form(props) {
   const handleMsg = (event) => {                     
     setMsg(event.target.value);
   }
-  
+// To handle email
   const handleEmail = (event) => {
     var email = event.target.value;
     setEmail(event.target.value);
     if (validator.isEmail(email) || email == null) {
+// if valid email do nothing
       setEmailBoxColor("");
     } else {
+// if email is wrong, change border color to red
       setEmailBoxColor("red");
     }
   }
   const onSubmit = (event) => {
     event.preventDefault();
-    var email = document.getElementById("email").getAttribute("value").toString();
+    var email = document
+                .getElementById("email")
+                .getAttribute("value")
+                .toString();
     if (validator.isEmail(email) || email == null) {
-                                                         //submit data
+      
     } else {
+// If wrong email entered raise an alert 
       alert("Enter correct email");
     }
   }
   return(
     <form onSubmit = {onSubmit}>
       <br/>
-        <div className="container">
-          <div className="row d-flex flex-row-reverse">
+        <div className = "container">
+          <div className = "row d-flex flex-row-reverse">
             <div className="col-4 col-md-4 p-2">
             Last Name
             <br/>
@@ -82,11 +99,11 @@ function Form(props) {
               <input type = "text" placeholder = "First Name" onChange = {handleFname}/>
             </div>
           </div>
-          <div className="row d-flex flex-row-reverse">
-                <div className="col-4 col-md-4 p-2">Email*<br/>
+          <div className = "row d-flex flex-row-reverse">
+                <div className = "col-4 col-md-4 p-2">Email*<br/>
                   <input id = "email" type = "text" style = {{borderColor: emailBoxColor}} placeholder = "Email" onChange = {handleEmail} value = {email}/>
                 </div>
-                <div className="col-4 col-md-4 p-2">
+                <div className = "col-4 col-md-4 p-2">
                 Subject
                 <br/>
                   <input type = "text" placeholder = "Subject" onChange = {handleSub} value = {sub}/>
@@ -95,12 +112,12 @@ function Form(props) {
           <br/>
           <br/>
           <br/>
-          <div className="row d-flex flex-row-reverse">
-            <div className="col-4 col-md-4 p-2 top-buffer">
-              <button type="submit" class="btn btn-warning btn-circle btn-xl align-top" >Submit</button>
+          <div className = "row d-flex flex-row-reverse">
+            <div className = "col-4 col-md-4 p-2 top-buffer">
+              <button type = "submit" className = "btn btn-warning btn-circle btn-xl align-top" >Submit</button>
             </div>
-            <div className="col-4 col-md-4 p-2">Message<br/>
-              <textarea rows="7" cols="35" placeholder = "Message" onChange = {handleMsg} value = {msg}></textarea>
+            <div className = "col-4 col-md-4 p-2">Message<br/>
+              <textarea rows = "7" cols = "35" placeholder = "Message" onChange = {handleMsg} value = {msg}></textarea>
             </div>
           </div> 
         </div>
