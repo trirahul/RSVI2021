@@ -11,4 +11,7 @@
     position: relative;
     top: 20px;
 }
-
+.form-pos {
+	position: relative;
+	margin-top: -200px;
+}
