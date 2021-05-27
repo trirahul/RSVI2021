@@ -2,29 +2,30 @@ import ReactDOM from 'react-dom';
 import React, { useEffect, useState } from "react";       // to be used for hooks
 import validator from 'validator';                        // to be used to validate email
 import { Helmet } from "react-helmet";                    // to use for page title
+import { Component } from 'react';
 // page title
+import './Contact.css';
 const TITLE = 'Contact us';        
 
 // Contact Component
 function ContactDetails() {                               
   return (
-    <div className = "container">
+    <div className = "container float-start">
       <Helmet>
         <title>{TITLE}</title>
       </Helmet>
-      <div className = "float-start">
-        <h1>CONTACT</h1>
+      <div className = "text-left">
+        <h2>CONTACT</h2>
         <p>Looking forward to hearing from you
-        <br/>
         <br/>
         <b>Phone</b>
         <br/>
         123-456-7890
-        <br/>
-        <br/>
+        <p>
         <b>Email</b>
         <br/>
         info@mysite.com
+        </p>
         </p>
       </div>
     </div>
@@ -85,7 +86,7 @@ function Form(props) {
   return(
     <form onSubmit = {onSubmit}>
       <br/>
-        <div className = "container">
+        <div className = "container text right form-pos">
           <div className = "row d-flex flex-row-reverse">
             <div className="col-4 col-md-4 p-2">
             Last Name
@@ -113,7 +114,7 @@ function Form(props) {
           <br/>
           <div className = "row d-flex flex-row-reverse">
             <div className = "col-4 col-md-4 p-2 top-buffer">
-              <button type = "submit" className = "btn btn-warning btn-circle btn-xl align-top" >Submit</button>
+              <button type = "submit" className = "btn btn-warning btn-circle btn-xl align-top" ><b>SUBMIT</b></button>
             </div>
             <div className = "col-4 col-md-4 p-2">Message<br/>
               <textarea rows = "7" cols = "35" placeholder = "Message" onChange = {handleMsg} value = {msg}></textarea>
@@ -126,10 +127,10 @@ function Form(props) {
 
 function Contact() {
   return (
-    <React.Fragment>
-      <div><ContactDetails/></div>
-      <div><Form/></div>
-    </React.Fragment>
+      <>
+      <ContactDetails/>
+      <Form/>
+      </>
   );
 }
 
