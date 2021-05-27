@@ -74,13 +74,12 @@ function Form(props) {
     event.preventDefault();
     var email = document
                 .getElementById("email")
-                .getAttribute("value")
-                .toString();
+                .getAttribute("value");
     if (validator.isEmail(email) || email == null) {
       
     } else {
 // If wrong email entered raise an alert 
-      alert("Enter correct email");
+      alert("Please enter correct email");
     }
   }
   return(
